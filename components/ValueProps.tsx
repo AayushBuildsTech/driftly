@@ -23,7 +23,6 @@ const STATS = [
   { value: 4.7, decimals: 1, prefix: "★ ", suffix: "", label: "Average rating" },
   { value: 300, decimals: 0, prefix: "", suffix: "+", label: "Happy families" },
   { value: 100, decimals: 0, prefix: "", suffix: "%", label: "Private transfers" },
-  { value: 15, decimals: 0, prefix: "", suffix: "+", label: "Destinations" },
 ];
 
 export function ValueProps() {
@@ -37,7 +36,7 @@ export function ValueProps() {
     >
       {/* Animated trust stats */}
       <Reveal>
-        <div className="mb-12 grid grid-cols-2 gap-6 rounded-2xl border border-line bg-background p-6 md:mb-16 md:grid-cols-4 md:p-8">
+        <div className="mb-12 grid grid-cols-3 gap-4 rounded-2xl border border-line bg-background p-6 md:mb-16 md:grid-cols-3 md:gap-6 md:p-8">
           {STATS.map((s) => (
             <div key={s.label} className="text-center">
               <Counter
