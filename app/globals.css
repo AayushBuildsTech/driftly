@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #111827;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Slow cinematic zoom for hero imagery ("Ken Burns"). */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1.14);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 22s ease-out both;
+}
+
+/* Dashed flight-route draw. */
+@keyframes dash-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
