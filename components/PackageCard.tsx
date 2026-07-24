@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
 import { useCallbackModal } from "@/components/CallbackProvider";
 import { openWhatsApp, packageMessage } from "@/lib/whatsapp";
-import { formatCurrency } from "@/lib/format";
 import type { TravelPackage } from "@/types/package";
 
 export function PackageCard({
@@ -74,12 +73,11 @@ export function PackageCard({
         <hr className="my-4 border-line" />
 
         <div className="mt-auto">
-          <p className="text-sm font-medium text-ink/50">Starting from</p>
-          <p className="text-2xl font-bold text-primary">
-            {formatCurrency(pkg.priceFrom)}
-            <span className="ml-1 text-sm font-medium text-ink/50">
-              / person
-            </span>
+          <p className="text-base font-bold text-primary">
+            Tailor-made for you
+          </p>
+          <p className="text-sm font-medium text-ink/55">
+            Get a free custom quote — no hidden fees.
           </p>
 
           <Button asChild size="lg" className="mt-4 w-full">
