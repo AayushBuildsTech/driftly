@@ -13,7 +13,6 @@ import { InclusionsList } from "@/components/detail/InclusionsList";
 import { GallerySection } from "@/components/detail/GallerySection";
 import { FaqAccordion } from "@/components/detail/FaqAccordion";
 import { DetailCtaBand } from "@/components/detail/DetailCtaBand";
-import { formatCurrency } from "@/lib/format";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -70,9 +69,7 @@ export default async function PackagePage({ params }: PageProps) {
     },
     offers: {
       "@type": "Offer",
-      price: pkg.priceFrom,
-      priceCurrency: "INR",
-      description: `From ${formatCurrency(pkg.priceFrom)} per person`,
+      description: "Fully customised — request a free quote",
     },
     itinerary: {
       "@type": "ItemList",

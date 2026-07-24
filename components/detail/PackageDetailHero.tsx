@@ -15,7 +15,6 @@ import { Parallax } from "@/components/animation/Parallax";
 import { DownloadItineraryButton } from "@/components/detail/DownloadItineraryButton";
 import { useCallbackModal } from "@/components/CallbackProvider";
 import { openWhatsApp, packageMessage } from "@/lib/whatsapp";
-import { formatCurrency } from "@/lib/format";
 import type { TravelPackage } from "@/types/package";
 
 export function PackageDetailHero({ pkg }: { pkg: TravelPackage }) {
@@ -80,15 +79,8 @@ export function PackageDetailHero({ pkg }: { pkg: TravelPackage }) {
 
         <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
           <div className="rounded-btn bg-white/10 px-4 py-2.5 backdrop-blur">
-            <span className="text-xs font-medium text-white/70">
-              Starting from
-            </span>
-            <p className="text-2xl font-bold text-white">
-              {formatCurrency(pkg.priceFrom)}
-              <span className="ml-1 text-sm font-medium text-white/70">
-                / person
-              </span>
-            </p>
+            <span className="text-xs font-medium text-white/70">Tailor-made</span>
+            <p className="text-lg font-bold text-white">Free custom quote</p>
           </div>
 
           <div className="flex flex-1 flex-col gap-3 sm:flex-row sm:flex-wrap">
