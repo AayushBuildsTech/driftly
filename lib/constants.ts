@@ -16,9 +16,8 @@ export const BRAND = {
   email: "driftlytravels@gmail.com",
   // GST Identification Number — shown in the header/footer for authenticity.
   gstin: "29BBSPP5059E1Z2",
-  // GitHub Pages project URL. If you attach a custom domain later, change this
-  // to the domain and set BASE_PATH below (and basePath in next.config) to "".
-  url: "https://aayushbuildstech.github.io/driftly",
+  // Live site URL. Custom apex domain (see public/CNAME + next.config basePath).
+  url: "https://driftlytravels.in",
 } as const;
 
 /**
@@ -29,12 +28,13 @@ export const BRAND = {
 export const ADMIN_PASSWORD = "Patanvis.online@123";
 
 /**
- * Base path the site is served from. GitHub Pages hosts this project repo under
- * /driftly, so production asset links (PDFs, etc.) must be prefixed. next/link
- * and next/image handle this automatically; only raw <a href> / string URLs
- * need asset(). Set both this and next.config's basePath to "" for a root/custom domain.
+ * Base path the site is served from. On the custom apex domain the site lives
+ * at the root, so this is empty. If you revert to the github.io/driftly
+ * sub-path, set this back to "/driftly" (and next.config's basePath) so raw
+ * <a href> / string asset() URLs resolve. next/link and next/image handle the
+ * prefix automatically.
  */
-export const BASE_PATH = process.env.NODE_ENV === "production" ? "/driftly" : "";
+export const BASE_PATH = "";
 
 /** Prefix a public asset path (e.g. a PDF) with the base path. */
 export function asset(path: string): string {
