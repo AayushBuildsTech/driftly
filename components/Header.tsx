@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { PhoneCall } from "lucide-react";
+import { PhoneCall, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useCallbackModal } from "@/components/CallbackProvider";
 import { BRAND, asset } from "@/lib/constants";
@@ -46,6 +46,16 @@ export function Header() {
             {BRAND.name}
           </span>
         </a>
+
+        <div
+          className="hidden items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-emerald-800 sm:flex"
+          title="GST registered business"
+        >
+          <BadgeCheck className="h-4 w-4 text-emerald-600" aria-hidden />
+          <span className="text-xs font-semibold tracking-tight">
+            GSTIN: {BRAND.gstin}
+          </span>
+        </div>
 
         <Button
           variant="primary"

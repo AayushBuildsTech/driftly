@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AdminGate from "@/components/AdminGate";
 import AdminDashboard from "@/components/AdminDashboard";
 
 // Private internal tool — keep it out of search engines and social previews.
@@ -15,5 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default function AdminPage() {
-  return <AdminDashboard />;
+  return (
+    <AdminGate>
+      <AdminDashboard />
+    </AdminGate>
+  );
 }

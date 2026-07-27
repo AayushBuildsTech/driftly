@@ -25,6 +25,9 @@ export function Footer() {
             Custom 5-star international holidays with private transfers, visa
             support and upfront, honest pricing.
           </p>
+          <p className="mt-3 text-xs font-semibold tracking-tight text-ink/60">
+            GSTIN: {BRAND.gstin}
+          </p>
         </div>
 
         <div className="md:text-right">

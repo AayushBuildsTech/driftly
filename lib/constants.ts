@@ -14,10 +14,19 @@ export const BRAND = {
   phoneTel: "+919591440976",
   // Leads are emailed here via FormSubmit (see lib/formsubmit.ts). No key needed.
   email: "driftlytravels@gmail.com",
+  // GST Identification Number — shown in the header/footer for authenticity.
+  gstin: "29BBSPP5059E1Z2",
   // GitHub Pages project URL. If you attach a custom domain later, change this
   // to the domain and set BASE_PATH below (and basePath in next.config) to "".
   url: "https://aayushbuildstech.github.io/driftly",
 } as const;
+
+/**
+ * Passphrase for the internal /admin dashboard gate. NOTE: this ships in the
+ * client bundle (static export has no server), so it only deters casual access
+ * — it is NOT real security. Change it here to rotate the password.
+ */
+export const ADMIN_PASSWORD = "Patanvis.online@123";
 
 /**
  * Base path the site is served from. GitHub Pages hosts this project repo under
