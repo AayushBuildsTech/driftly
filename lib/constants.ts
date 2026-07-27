@@ -65,10 +65,6 @@ export const DESTINATIONS: string[] = [
   "Thailand",
   "Dubai",
   "Bali",
-  "Maldives",
-  "Singapore",
-  "Vietnam",
-  "Other",
 ];
 
 export const VALUE_PROPS = [
